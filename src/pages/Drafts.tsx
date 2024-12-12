@@ -2,7 +2,7 @@ import { DashboardSidebar } from "@/components/DashboardSidebar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Calendar, Filter, Search } from "lucide-react";
+import { Calendar, Filter, Search, Plus } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -11,6 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Link } from "react-router-dom";
 
 const Drafts = () => {
   return (
@@ -119,6 +120,18 @@ const Drafts = () => {
                   ))}
                 </TableBody>
               </Table>
+            </div>
+
+            {/* New Program Button */}
+            <div className="flex justify-center mt-8">
+              <Link to="/management/create">
+                <Button 
+                  className="bg-primary text-white hover:bg-primary/90 px-6 py-2 rounded-lg flex items-center gap-2"
+                >
+                  <Plus className="h-5 w-5" />
+                  Start New Program
+                </Button>
+              </Link>
             </div>
           </div>
         </main>
