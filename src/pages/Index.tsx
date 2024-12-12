@@ -1,9 +1,10 @@
-import { Button } from "@/components/ui/button";
 import { DashboardSidebar } from "@/components/DashboardSidebar";
-import { MetricsCards } from "@/components/MetricsCards";
+import { DashboardHeader } from "@/components/DashboardHeader";
 import { ConversionChart } from "@/components/ConversionChart";
-import { AffiliateSection } from "@/components/AffiliateSection";
+import { AffiliateTable } from "@/components/AffiliateTable";
+import { AdvancedAnalytics } from "@/components/AdvancedAnalytics";
 import { Bell } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
@@ -19,10 +20,13 @@ const Index = () => {
           </div>
         </header>
         <main className="p-8">
-          <div className="space-y-8">
-            <MetricsCards />
-            <ConversionChart />
-            <AffiliateSection />
+          <div className="space-y-6">
+            <DashboardHeader />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ConversionChart />
+              <AffiliateTable />
+            </div>
+            <AdvancedAnalytics />
           </div>
         </main>
       </div>
