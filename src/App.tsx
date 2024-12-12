@@ -25,8 +25,8 @@ const App = () => (
           <Route path="/dashboard/overview" element={<Overview />} />
           <Route path="/dashboard/key-metrics" element={<KeyMetrics />} />
           <Route path="/dashboard/notifications" element={<Notifications />} />
+          <Route path="/management" element={<ManagePrograms />} />
           <Route path="/management/create" element={<CreateProgram />} />
-          <Route path="/management/programs" element={<ManagePrograms />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
