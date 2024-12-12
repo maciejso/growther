@@ -2,16 +2,6 @@ import { Home, BarChart2, Users, FileText, Megaphone, DollarSign, Settings } fro
 
 export const menuItems = [
   { 
-    icon: BarChart2, 
-    label: "Analytics", 
-    path: "/analytics",
-    submenu: [
-      { label: "Performance Analytics", path: "/analytics" },
-      { label: "ROI Analytics", path: "/analytics/roi" },
-      { label: "Conversion Funnels", path: "/analytics/funnels" }
-    ]
-  },
-  { 
     icon: Home, 
     label: "Dashboard", 
     path: "/dashboard",
@@ -39,6 +29,16 @@ export const menuItems = [
       { label: "Manage Affiliates", path: "/affiliate" },
       { label: "Top Affiliates", path: "/affiliate/top" },
       { label: "Affiliate Messaging", path: "/affiliate/messaging" }
+    ]
+  },
+  { 
+    icon: BarChart2, 
+    label: "Analytics", 
+    path: "/analytics",
+    submenu: [
+      { label: "Performance Analytics", path: "/analytics" },
+      { label: "ROI Analytics", path: "/analytics/roi" },
+      { label: "Conversion Funnels", path: "/analytics/funnels" }
     ]
   },
   { icon: Megaphone, label: "Marketing Assets", path: "/dashboard/assets" },
