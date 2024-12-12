@@ -21,6 +21,7 @@ import {
   FunnelChart,
   Funnel,
   LabelList,
+  Cell,
 } from "recharts";
 
 const funnelData = [
