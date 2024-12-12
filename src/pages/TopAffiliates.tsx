@@ -1,6 +1,6 @@
 import { DashboardSidebar } from "@/components/DashboardSidebar";
 import { Button } from "@/components/ui/button";
-import { Filter } from "lucide-react";
+import { Filter, Users, ExternalLink } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -134,6 +134,24 @@ const TopAffiliates = () => {
                   </ResponsiveContainer>
                 </div>
               </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex justify-center gap-4 mt-8">
+              <Button 
+                className="bg-primary text-white hover:bg-primary/90"
+                size="lg"
+              >
+                <ExternalLink className="mr-2 h-5 w-5" />
+                View Detailed Affiliate Profiles
+              </Button>
+              <Button 
+                className="bg-primary text-white hover:bg-primary/90"
+                size="lg"
+              >
+                <Users className="mr-2 h-5 w-5" />
+                Contact Affiliates
+              </Button>
             </div>
           </div>
         </main>
