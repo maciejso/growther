@@ -1,4 +1,4 @@
-import { Home, BarChart2, Users, FileText, DollarSign, Settings, HelpCircle } from "lucide-react";
+import { Home, BarChart2, Users, FileText, DollarSign, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLocation, Link } from "react-router-dom";
 
@@ -9,7 +9,8 @@ const menuItems = [
     path: "/analytics",
     submenu: [
       { label: "Performance Analytics", path: "/analytics" },
-      { label: "ROI Analytics", path: "/analytics/roi" }
+      { label: "ROI Analytics", path: "/analytics/roi" },
+      { label: "Conversion Funnels", path: "/analytics/funnels" }
     ]
   },
   { 
