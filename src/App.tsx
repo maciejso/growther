@@ -12,6 +12,7 @@ import CreateProgram from "./pages/CreateProgram";
 import ManagePrograms from "./pages/ManagePrograms";
 import Drafts from "./pages/Drafts";
 import Affiliate from "./pages/Affiliate";
+import TopAffiliates from "./pages/TopAffiliates";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/management/create" element={<CreateProgram />} />
           <Route path="/management/drafts" element={<Drafts />} />
           <Route path="/affiliate" element={<Affiliate />} />
+          <Route path="/affiliate/top" element={<TopAffiliates />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
