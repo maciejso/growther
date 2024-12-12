@@ -1,6 +1,12 @@
 import { DashboardSidebar } from "@/components/DashboardSidebar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import {
   Table,
   TableBody,
@@ -9,7 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Filter, Download, Share2 } from "lucide-react";
+import { Filter, Download, Share2, CalendarIcon } from "lucide-react";
 import {
   LineChart,
   Line,
@@ -19,6 +25,9 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { useState } from "react";
+import { format } from "date-fns";
+import { cn } from "@/lib/utils";
 
 const performanceData = [
   { campaign: "ABC", affiliateName: "ABC", clicks: 20, conversions: 250, revenue: "$4500" },
@@ -42,6 +51,8 @@ const trendData = [
 ];
 
 const Analytics = () => {
+  const [date, setDate] = useState<Date>();
+
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardSidebar />
@@ -56,9 +67,28 @@ const Analytics = () => {
                 <span className="font-medium">Filters</span>
               </div>
               
-              <Button variant="outline" className="border-gray-300">
-                Date Range
-              </Button>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className={cn(
+                      "w-[240px] justify-start text-left font-normal border-gray-300",
+                      !date && "text-muted-foreground"
+                    )}
+                  >
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {date ? format(date, "PPP") : <span>Pick a date</span>}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    initialFocus
+                  />
+                </PopoverContent>
+              </Popover>
               
               <Button variant="outline" className="border-gray-300">
                 Campaign
