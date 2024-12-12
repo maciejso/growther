@@ -9,21 +9,18 @@ const menuItems = [
     path: "/analytics",
     submenu: [
       { label: "Performance Analytics", path: "/analytics" },
-      { label: "ROI Analytics", path: "/analytics/roi" },
-      { label: "Conversion Funnels", path: "/analytics/funnels" },
-      { label: "Audience Demographics", path: "/analytics/demographics" }
+      { label: "ROI Analytics", path: "/analytics/roi" }
     ]
   },
   { 
     icon: Home, 
     label: "Dashboard", 
-    active: true, 
     path: "/dashboard",
     submenu: [
       { label: "Overview", path: "/dashboard/overview" },
       { label: "Key Metrics", path: "/dashboard/key-metrics" },
       { label: "Notifications", path: "/dashboard/notifications" }
-    ] 
+    ]
   },
   { 
     icon: Users, 
@@ -78,7 +75,7 @@ export const DashboardSidebar = () => {
                 <item.icon className="w-5 h-5" />
                 <span>{item.label}</span>
               </Link>
-              {item.submenu && isActive && (
+              {item.submenu && (
                 <div className="ml-8 mt-1 space-y-1">
                   {item.submenu.map((subitem, subindex) => (
                     <Link
