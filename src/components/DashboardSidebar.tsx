@@ -10,7 +10,7 @@ const menuItems = [
     path: "/dashboard",
     submenu: [
       { label: "Overview", path: "/dashboard/overview" },
-      { label: "Key Metrics", path: "/dashboard/metrics" },
+      { label: "Key Metrics", path: "/dashboard/key-metrics" },
       { label: "Notifications", path: "/dashboard/notifications" }
     ] 
   },
