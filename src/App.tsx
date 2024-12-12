@@ -14,6 +14,7 @@ import Drafts from "./pages/Drafts";
 import Affiliate from "./pages/Affiliate";
 import TopAffiliates from "./pages/TopAffiliates";
 import AffiliateMessaging from "./pages/AffiliateMessaging";
+import Analytics from "./pages/Analytics";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/affiliate" element={<Affiliate />} />
           <Route path="/affiliate/top" element={<TopAffiliates />} />
           <Route path="/affiliate/messaging" element={<AffiliateMessaging />} />
+          <Route path="/analytics" element={<Analytics />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

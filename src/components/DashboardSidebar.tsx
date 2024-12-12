@@ -4,6 +4,17 @@ import { useLocation, Link } from "react-router-dom";
 
 const menuItems = [
   { 
+    icon: BarChart2, 
+    label: "Analytics", 
+    path: "/analytics",
+    submenu: [
+      { label: "Performance Analytics", path: "/analytics" },
+      { label: "ROI Analytics", path: "/analytics/roi" },
+      { label: "Conversion Funnels", path: "/analytics/funnels" },
+      { label: "Audience Demographics", path: "/analytics/demographics" }
+    ]
+  },
+  { 
     icon: Home, 
     label: "Dashboard", 
     active: true, 
@@ -34,7 +45,6 @@ const menuItems = [
       { label: "Affiliate Messaging", path: "/affiliate/messaging" }
     ]
   },
-  { icon: BarChart2, label: "Analytics", path: "/dashboard/analytics" },
   { icon: FileText, label: "Marketing Assets", path: "/dashboard/assets" },
   { icon: DollarSign, label: "Payment & Finance", path: "/dashboard/finance" },
   { icon: Settings, label: "Support & Settings", path: "/dashboard/settings" },
