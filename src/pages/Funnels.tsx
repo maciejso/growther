@@ -145,7 +145,17 @@ const Funnels = () => {
                           fill="#666"
                           stroke="none"
                           dataKey="value"
-                          offset={120}
+                          offset={10}
+                          content={({ x, y, value }) => (
+                            <text
+                              x={x + 30}
+                              y={y + 20}
+                              fill="#666"
+                              textAnchor="start"
+                            >
+                              {value}
+                            </text>
+                          )}
                         />
                       </Funnel>
                     </FunnelChart>
