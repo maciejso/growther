@@ -8,6 +8,7 @@ import Landing from "./pages/Landing";
 import Overview from "./pages/Overview";
 import KeyMetrics from "./pages/KeyMetrics";
 import Notifications from "./pages/Notifications";
+import CreateProgram from "./pages/CreateProgram";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/dashboard/overview" element={<Overview />} />
           <Route path="/dashboard/key-metrics" element={<KeyMetrics />} />
           <Route path="/dashboard/notifications" element={<Notifications />} />
+          <Route path="/management/create" element={<CreateProgram />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
