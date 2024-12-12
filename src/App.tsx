@@ -17,6 +17,7 @@ import AffiliateMessaging from "./pages/AffiliateMessaging";
 import Analytics from "./pages/Analytics";
 import ROIAnalytics from "./pages/ROIAnalytics";
 import Funnels from "./pages/Funnels";
+import Demographics from "./pages/Demographics";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/analytics/roi" element={<ROIAnalytics />} />
           <Route path="/analytics/funnels" element={<Funnels />} />
+          <Route path="/analytics/demographics" element={<Demographics />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

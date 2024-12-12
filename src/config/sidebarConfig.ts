@@ -38,7 +38,8 @@ export const menuItems = [
     submenu: [
       { label: "Performance Analytics", path: "/analytics" },
       { label: "ROI Analytics", path: "/analytics/roi" },
-      { label: "Conversion Funnels", path: "/analytics/funnels" }
+      { label: "Conversion Funnels", path: "/analytics/funnels" },
+      { label: "Audience Demographics", path: "/analytics/demographics" }
     ]
   },
   { icon: Megaphone, label: "Marketing Assets", path: "/dashboard/assets" },
