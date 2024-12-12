@@ -10,6 +10,7 @@ import {
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { DashboardHeader } from "@/components/DashboardHeader";
+import { DashboardSidebar } from "@/components/DashboardSidebar";
 
 interface NotificationItemProps {
   title: string;
@@ -28,11 +29,14 @@ const NotificationItem = ({ title, description }: NotificationItemProps) => (
 
 const Notifications = () => {
   return (
-    <div className="p-8 space-y-6">
-      <div className="flex items-center gap-2 mb-6">
-        <Bell className="w-5 h-5" />
-        <h1 className="text-2xl font-semibold">Notifications Overview</h1>
-      </div>
+    <div className="min-h-screen bg-gray-50">
+      <DashboardSidebar />
+      <div className="pl-64">
+        <div className="p-8 space-y-6">
+          <div className="flex items-center gap-2 mb-6">
+            <Bell className="w-5 h-5" />
+            <h1 className="text-2xl font-semibold">Notifications Overview</h1>
+          </div>
 
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
@@ -159,6 +163,8 @@ const Notifications = () => {
             </div>
           </div>
         </Card>
+      </div>
+        </div>
       </div>
     </div>
   );
