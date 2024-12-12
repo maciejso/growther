@@ -42,7 +42,19 @@ export const menuItems = [
       { label: "Audience Demographics", path: "/analytics/demographics" }
     ]
   },
-  { icon: Megaphone, label: "Marketing Assets", path: "/dashboard/assets" },
-  { icon: DollarSign, label: "Payment & Finance", path: "/dashboard/finance" },
-  { icon: Settings, label: "Support & Settings", path: "/dashboard/settings" },
+  { 
+    icon: Megaphone, 
+    label: "Marketing Assets", 
+    path: "/marketing",
+  },
+  { 
+    icon: DollarSign, 
+    label: "Payment & Finance", 
+    path: "/finance",
+  },
+  { 
+    icon: Settings, 
+    label: "Support & Settings", 
+    path: "/settings",
+  },
 ];
