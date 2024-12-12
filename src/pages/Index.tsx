@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { DashboardSidebar } from "@/components/DashboardSidebar";
 import { MetricsCards } from "@/components/MetricsCards";
 import { ConversionChart } from "@/components/ConversionChart";
-import { AffiliateTable } from "@/components/AffiliateTable";
-import { Plus, Bell } from "lucide-react";
+import { AffiliateSection } from "@/components/AffiliateSection";
+import { Bell } from "lucide-react";
 
 const Index = () => {
   return (
@@ -12,25 +12,17 @@ const Index = () => {
       <div className="pl-64">
         <header className="bg-white border-b border-gray-200 px-8 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-semibold">Company Name</h1>
-            <Button variant="ghost" size="icon">
+            <h1 className="text-2xl font-semibold text-gray-900">Company Name</h1>
+            <Button variant="ghost" size="icon" className="text-gray-500">
               <Bell className="h-5 w-5" />
             </Button>
           </div>
         </header>
         <main className="p-8">
-          <div className="mb-8 flex justify-between items-center">
-            <Button className="inline-flex items-center gap-2">
-              <Plus className="h-5 w-5" />
-              Create New Affiliate Program
-            </Button>
-          </div>
           <div className="space-y-8">
             <MetricsCards />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <ConversionChart />
-              <AffiliateTable />
-            </div>
+            <ConversionChart />
+            <AffiliateSection />
           </div>
         </main>
       </div>
