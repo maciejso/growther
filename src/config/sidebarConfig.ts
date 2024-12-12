@@ -1,7 +1,7 @@
 import { 
   Home, 
   ListTodo, 
-  Tool, 
+  Wrench, 
   BarChart2, 
   Megaphone, 
   DollarSign, 
@@ -31,7 +31,7 @@ export const menuItems = [
     ]
   },
   { 
-    icon: Tool, 
+    icon: Wrench, 
     label: "Affiliate Tools", 
     path: "/affiliate",
     submenu: [
