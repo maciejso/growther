@@ -14,7 +14,16 @@ const menuItems = [
       { label: "Notifications", path: "/dashboard/notifications" }
     ] 
   },
-  { icon: Users, label: "Program Management", path: "/dashboard/program" },
+  { 
+    icon: Users, 
+    label: "Program Management", 
+    path: "/management",
+    submenu: [
+      { label: "Create Program", path: "/management/create" },
+      { label: "Manage Programs", path: "/management/manage" },
+      { label: "Drafts", path: "/management/drafts" }
+    ]
+  },
   { icon: FileText, label: "Affiliate Tools", path: "/dashboard/tools" },
   { icon: BarChart2, label: "Analytics", path: "/dashboard/analytics" },
   { icon: FileText, label: "Marketing Assets", path: "/dashboard/assets" },
