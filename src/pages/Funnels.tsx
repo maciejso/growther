@@ -146,10 +146,10 @@ const Funnels = () => {
                           stroke="none"
                           dataKey="value"
                           offset={10}
-                          content={({ x, y, value }) => (
+                          content={({ x, y, value }: { x: number | undefined, y: number | undefined, value: number }) => (
                             <text
-                              x={x + 30}
-                              y={y + 20}
+                              x={typeof x === 'number' ? x + 30 : 0}
+                              y={typeof y === 'number' ? y + 20 : 0}
                               fill="#666"
                               textAnchor="start"
                             >
