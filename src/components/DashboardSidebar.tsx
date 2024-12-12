@@ -1,52 +1,6 @@
-import { Home, BarChart2, Users, FileText, DollarSign, Settings } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { useLocation, Link } from "react-router-dom";
-
-const menuItems = [
-  { 
-    icon: BarChart2, 
-    label: "Analytics", 
-    path: "/analytics",
-    submenu: [
-      { label: "Performance Analytics", path: "/analytics" },
-      { label: "ROI Analytics", path: "/analytics/roi" },
-      { label: "Conversion Funnels", path: "/analytics/funnels" }
-    ]
-  },
-  { 
-    icon: Home, 
-    label: "Dashboard", 
-    path: "/dashboard",
-    submenu: [
-      { label: "Overview", path: "/dashboard/overview" },
-      { label: "Key Metrics", path: "/dashboard/key-metrics" },
-      { label: "Notifications", path: "/dashboard/notifications" }
-    ]
-  },
-  { 
-    icon: Users, 
-    label: "Program Management", 
-    path: "/management",
-    submenu: [
-      { label: "Create Program", path: "/management/create" },
-      { label: "Manage Programs", path: "/management" },
-      { label: "Drafts", path: "/management/drafts" }
-    ]
-  },
-  { 
-    icon: FileText, 
-    label: "Affiliate Tools", 
-    path: "/affiliate",
-    submenu: [
-      { label: "Manage Affiliates", path: "/affiliate" },
-      { label: "Top Affiliates", path: "/affiliate/top" },
-      { label: "Affiliate Messaging", path: "/affiliate/messaging" }
-    ]
-  },
-  { icon: FileText, label: "Marketing Assets", path: "/dashboard/assets" },
-  { icon: DollarSign, label: "Payment & Finance", path: "/dashboard/finance" },
-  { icon: Settings, label: "Support & Settings", path: "/dashboard/settings" },
-];
+import { menuItems } from "@/config/sidebarConfig";
+import { SidebarMenuItem } from "./sidebar/SidebarMenuItem";
 
 export const DashboardSidebar = () => {
   const location = useLocation();
@@ -62,39 +16,17 @@ export const DashboardSidebar = () => {
         </Link>
       </div>
       <nav className="p-4">
-        {menuItems.map((item, index) => {
-          const isActive = location.pathname.startsWith(item.path);
-          return (
-            <div key={index} className="mb-1">
-              <Link
-                to={item.path}
-                className={cn(
-                  "w-full flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors",
-                  isActive && "bg-gray-100 font-medium"
-                )}
-              >
-                <item.icon className="w-5 h-5" />
-                <span>{item.label}</span>
-              </Link>
-              {item.submenu && (
-                <div className="ml-8 mt-1 space-y-1">
-                  {item.submenu.map((subitem, subindex) => (
-                    <Link
-                      key={subindex}
-                      to={subitem.path}
-                      className={cn(
-                        "block w-full text-left px-3 py-1 text-sm text-gray-600 hover:text-gray-900 rounded-lg",
-                        location.pathname === subitem.path && "bg-gray-100 text-gray-900"
-                      )}
-                    >
-                      {subitem.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          );
-        })}
+        {menuItems.map((item, index) => (
+          <SidebarMenuItem
+            key={index}
+            icon={item.icon}
+            label={item.label}
+            path={item.path}
+            submenu={item.submenu}
+            isActive={location.pathname.startsWith(item.path)}
+            currentPath={location.pathname}
+          />
+        ))}
       </nav>
     </div>
   );
