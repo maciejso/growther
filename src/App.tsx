@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Landing from "./pages/Landing";
 import Overview from "./pages/Overview";
 import KeyMetrics from "./pages/KeyMetrics";
+import Notifications from "./pages/Notifications";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/dashboard" element={<Index />} />
           <Route path="/dashboard/overview" element={<Overview />} />
           <Route path="/dashboard/key-metrics" element={<KeyMetrics />} />
+          <Route path="/dashboard/notifications" element={<Notifications />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
