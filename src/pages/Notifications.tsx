@@ -29,11 +29,10 @@ const NotificationItem = ({ title, description }: NotificationItemProps) => (
 const Notifications = () => {
   return (
     <div className="p-8 space-y-6">
-      <DashboardHeader
-        title="Notifications Overview"
-        icon={Bell}
-        description="Manage and view all your notifications in one place"
-      />
+      <div className="flex items-center gap-2 mb-6">
+        <Bell className="w-5 h-5" />
+        <h1 className="text-2xl font-semibold">Notifications Overview</h1>
+      </div>
 
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
