@@ -11,7 +11,12 @@ import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { DashboardHeader } from "@/components/DashboardHeader";
 
-const NotificationItem = ({ title, description }: { title: string; description: string }) => (
+interface NotificationItemProps {
+  title: string;
+  description: string;
+}
+
+const NotificationItem = ({ title, description }: NotificationItemProps) => (
   <div className="flex items-center justify-between p-4 border-b last:border-b-0">
     <div className="space-y-1">
       <h4 className="font-medium">{title}</h4>
