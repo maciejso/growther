@@ -9,6 +9,7 @@ import Overview from "./pages/Overview";
 import KeyMetrics from "./pages/KeyMetrics";
 import Notifications from "./pages/Notifications";
 import CreateProgram from "./pages/CreateProgram";
+import ManagePrograms from "./pages/ManagePrograms";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/dashboard/key-metrics" element={<KeyMetrics />} />
           <Route path="/dashboard/notifications" element={<Notifications />} />
           <Route path="/management/create" element={<CreateProgram />} />
+          <Route path="/management/programs" element={<ManagePrograms />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

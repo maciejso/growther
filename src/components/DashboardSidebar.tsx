@@ -20,7 +20,7 @@ const menuItems = [
     path: "/management",
     submenu: [
       { label: "Create Program", path: "/management/create" },
-      { label: "Manage Programs", path: "/management/manage" },
+      { label: "Manage Programs", path: "/management/programs" },
       { label: "Drafts", path: "/management/drafts" }
     ]
   },
