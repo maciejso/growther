@@ -133,8 +133,20 @@ const Funnels = () => {
                         data={funnelData}
                         dataKey="value"
                       >
-                        <LabelList position="right" fill="#000" stroke="none" dataKey="name" />
-                        <LabelList position="right" fill="#666" stroke="none" dataKey="value" />
+                        <LabelList
+                          position="right"
+                          fill="#000"
+                          stroke="none"
+                          dataKey="name"
+                          offset={10}
+                        />
+                        <LabelList
+                          position="right"
+                          fill="#666"
+                          stroke="none"
+                          dataKey="value"
+                          offset={45}
+                        />
                       </Funnel>
                     </FunnelChart>
                   </ResponsiveContainer>
