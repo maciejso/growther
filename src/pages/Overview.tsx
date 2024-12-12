@@ -2,7 +2,7 @@ import { DashboardSidebar } from "@/components/DashboardSidebar";
 import { MetricsCards } from "@/components/MetricsCards";
 import { ConversionChart } from "@/components/ConversionChart";
 import { AffiliateSection } from "@/components/AffiliateSection";
-import { Bell } from "lucide-react";
+import { Bell, PlusCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Overview = () => {
@@ -23,6 +23,15 @@ const Overview = () => {
             <MetricsCards />
             <ConversionChart />
             <AffiliateSection />
+            <div className="flex justify-center pt-4">
+              <Button 
+                className="bg-primary hover:bg-primary/90 text-white"
+                size="lg"
+              >
+                <PlusCircle className="mr-2 h-5 w-5" />
+                Add New Campaign
+              </Button>
+            </div>
           </div>
         </main>
       </div>
