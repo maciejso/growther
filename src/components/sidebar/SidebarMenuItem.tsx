@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LucideIcon } from "lucide-react";
+import { LucideIcon, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SidebarSubmenu } from "./SidebarSubmenu";
 
@@ -25,12 +25,18 @@ export const SidebarMenuItem = ({
       <Link
         to={path}
         className={cn(
-          "w-full flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors",
+          "w-full flex items-center justify-between gap-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors",
           isActive && "bg-gray-100 font-medium"
         )}
       >
-        <Icon className="w-5 h-5" />
-        <span>{label}</span>
+        <div className="flex items-center gap-3">
+          <Icon className="w-5 h-5" />
+          <span>{label}</span>
+        </div>
+        {submenu && <ChevronDown className={cn(
+          "w-4 h-4 transition-transform",
+          isActive && "transform rotate-180"
+        )} />}
       </Link>
       {submenu && <SidebarSubmenu submenu={submenu} isActive={isActive} currentPath={currentPath} />}
     </div>

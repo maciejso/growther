@@ -1,4 +1,13 @@
-import { Home, BarChart2, Users, FileText, Megaphone, DollarSign, Settings } from "lucide-react";
+import { 
+  Home, 
+  ListTodo, 
+  Tool, 
+  BarChart2, 
+  Megaphone, 
+  DollarSign, 
+  Settings,
+  ChevronDown
+} from "lucide-react";
 
 export const menuItems = [
   { 
@@ -12,7 +21,7 @@ export const menuItems = [
     ]
   },
   { 
-    icon: Users, 
+    icon: ListTodo, 
     label: "Program Management", 
     path: "/management",
     submenu: [
@@ -22,7 +31,7 @@ export const menuItems = [
     ]
   },
   { 
-    icon: FileText, 
+    icon: Tool, 
     label: "Affiliate Tools", 
     path: "/affiliate",
     submenu: [
