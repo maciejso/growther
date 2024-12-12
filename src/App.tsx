@@ -13,6 +13,7 @@ import ManagePrograms from "./pages/ManagePrograms";
 import Drafts from "./pages/Drafts";
 import Affiliate from "./pages/Affiliate";
 import TopAffiliates from "./pages/TopAffiliates";
+import AffiliateMessaging from "./pages/AffiliateMessaging";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/management/drafts" element={<Drafts />} />
           <Route path="/affiliate" element={<Affiliate />} />
           <Route path="/affiliate/top" element={<TopAffiliates />} />
+          <Route path="/affiliate/messaging" element={<AffiliateMessaging />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
