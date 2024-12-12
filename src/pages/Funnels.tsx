@@ -138,14 +138,14 @@ const Funnels = () => {
                           fill="#000"
                           stroke="none"
                           dataKey="name"
-                          offset={10}
+                          offset={20}
                         />
                         <LabelList
                           position="right"
                           fill="#666"
                           stroke="none"
                           dataKey="value"
-                          offset={45}
+                          offset={85}
                         />
                       </Funnel>
                     </FunnelChart>
